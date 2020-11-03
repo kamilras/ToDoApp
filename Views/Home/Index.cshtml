@@ -1,0 +1,14 @@
+﻿@model AplikacjaInternetowa.ViewModel.TaskListViewModel;
+
+@foreach (var task in Model.Tasks)
+{
+    <div>
+        <h3>
+            @task.Title;
+        </h3>
+        <p>
+            @task.Desc;
+        </p>
+        <a asp-controller="Home" asp-action="Finish" asp-route-id="@task.Id">Zakończ</a>
+    </div>
+}
